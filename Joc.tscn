@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Jugador_.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bloc1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://bloc2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pilota.tscn" type="PackedScene" id=4]
+[ext_resource path="res://limits.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fila2" type="Node2D" parent="."]
+position = Vector2( 40, 319 )
+
+[node name="bloc_1" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+
+[node name="bloc_2" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 64, 0 )
+
+[node name="bloc_3" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 128, 0 )
+
+[node name="bloc_4" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 192, 0 )
+
+[node name="bloc_5" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 256, 0 )
+
+[node name="bloc_6" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 320, 0 )
+
+[node name="bloc_7" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+
+[node name="bloc_8" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 448, 0 )
+
+[node name="bloc_9" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 512, 0 )
+
+[node name="bloc_10" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 576, 0 )
+
+[node name="bloc_11" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 640, 0 )
+
+[node name="bloc_12" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 704, 0 )
+
+[node name="bloc_13" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 768, 0 )
+
+[node name="bloc_14" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 832, 0 )
+
+[node name="bloc_15" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 896, 0 )
+
+[node name="Jugador" parent="." instance=ExtResource( 1 )]
+position = Vector2( 406, 584 )
+
+[node name="fila1" type="Node2D" parent="."]
+
+[node name="bloc1" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 35, 361 )
+
+[node name="bloc2" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 123, 361 )
+
+[node name="bloc3" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 211, 361 )
+
+[node name="bloc4" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 299, 361 )
+
+[node name="bloc5" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 387, 361 )
+
+[node name="bloc6" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 475, 361 )
+
+[node name="bloc7" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 563, 361 )
+
+[node name="bloc8" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 651, 361 )
+
+[node name="bloc9" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 739, 361 )
+
+[node name="bloc10" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 827, 361 )
+
+[node name="bloc11" parent="fila1" instance=ExtResource( 2 )]
+position = Vector2( 915, 361 )
+
+[node name="pilota" parent="." instance=ExtResource( 4 )]
+position = Vector2( 505, 514 )
+
+[node name="limits" parent="." instance=ExtResource( 5 )]
+position = Vector2( 503, -8 )
+scale = Vector2( 3, 1 )
+
+[node name="limits2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -8, 307 )
+rotation = 1.5708
+scale = Vector2( 3, 1.06 )
+
+[node name="limits3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1032, 204 )
+rotation = 1.5708
+scale = Vector2( 3, 1 )
+
+[node name="limits4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 496, 608 )
+scale = Vector2( 3, 1 )
