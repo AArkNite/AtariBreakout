@@ -96,6 +96,7 @@ position = Vector2( 915, 361 )
 
 [node name="pilota" parent="." instance=ExtResource( 4 )]
 position = Vector2( 505, 514 )
+gravity_scale = 0.0
 
 [node name="limits" parent="." instance=ExtResource( 5 )]
 position = Vector2( 503, -8 )
@@ -109,8 +110,4 @@ scale = Vector2( 3, 1.06 )
 [node name="limits3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1032, 204 )
 rotation = 1.5708
-scale = Vector2( 3, 1 )
-
-[node name="limits4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 496, 608 )
 scale = Vector2( 3, 1 )
