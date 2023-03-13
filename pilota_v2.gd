@@ -1,6 +1,6 @@
 extends KinematicBody2D
-
-
+var velocitat := 5
+var moviment := Vector2.ZERO
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,5 +12,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	moviment.y = velocitat
+	moviment.y = velocitat
+	
+#	if collision 
+	pass
