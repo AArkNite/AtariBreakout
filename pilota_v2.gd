@@ -1,5 +1,5 @@
-extends RigidBody2D
-var moviment := Vector2.ZERO
+extends KinematicBody2D
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -8,9 +8,9 @@ var moviment := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	gravity_scale = 100
-	linear_velocity.x = 10
 	pass # Replace with function body.
-func _process(delta):
-	gravity_scale = 0
-	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
