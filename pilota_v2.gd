@@ -15,6 +15,7 @@ func _process(delta):
 		var colisio := move_and_collide(velocitat * delta)
 		if colisio:
 			velocitat = velocitat.bounce(colisio.normal)
+			
 func _on_contador_body_entered(body):
 	position = Vector2(500, 500)
 	em_moc = false
@@ -22,3 +23,7 @@ func _on_contador_body_entered(body):
 	
 func _on_Timer_timeout():
 	em_moc = true
+
+
+func _on_contador_body_exited(body):
+	pass # Replace with function body.

@@ -14,9 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	moviment.x = Input.get_axis("ves_esquerra", "ves_dreta") * velocitat
-	if moviment.y > 0 or moviment.y < 0:
-		moviment.y = 0
+	if position.y > 584 or position.y < 584:
+		position.y = 584
 	moviment = move_and_slide(moviment)
 	

@@ -10,7 +10,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Jugador" parent="." instance=ExtResource( 1 )]
-position = Vector2( 406, 584 )
+position = Vector2( 400, 584 )
 
 [node name="fila1" type="Node2D" parent="."]
 
@@ -383,3 +383,4 @@ position = Vector2( 832, 0 )
 position = Vector2( 896, 0 )
 
 [connection signal="body_entered" from="contador" to="pilota_v2" method="_on_contador_body_entered"]
+[connection signal="body_exited" from="contador" to="pilota_v2" method="_on_contador_body_exited"]
