@@ -3,7 +3,7 @@
 [ext_resource path="res://Jugador_.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bloc1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://bloc2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://pilota.tscn" type="PackedScene" id=4]
+[ext_resource path="res://contador.tscn" type="PackedScene" id=4]
 [ext_resource path="res://limits.tscn" type="PackedScene" id=5]
 [ext_resource path="res://pilota_v2.tscn" type="PackedScene" id=6]
 
@@ -14,9 +14,6 @@ position = Vector2( 40, 319 )
 
 [node name="bloc_1" parent="fila2" instance=ExtResource( 3 )]
 position = Vector2( 0, 0 )
-
-[node name="bloc_2" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 64, 0 )
 
 [node name="bloc_3" parent="fila2" instance=ExtResource( 3 )]
 position = Vector2( 128, 0 )
@@ -63,42 +60,37 @@ position = Vector2( 406, 584 )
 [node name="fila1" type="Node2D" parent="."]
 
 [node name="bloc1" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 35, 361 )
+position = Vector2( 35, 357 )
 
 [node name="bloc2" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 123, 361 )
+position = Vector2( 123, 357 )
 
 [node name="bloc3" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 211, 361 )
+position = Vector2( 211, 357 )
 
 [node name="bloc4" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 299, 361 )
+position = Vector2( 299, 357 )
 
 [node name="bloc5" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 387, 361 )
+position = Vector2( 387, 357 )
 
 [node name="bloc6" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 475, 361 )
+position = Vector2( 475, 357 )
 
 [node name="bloc7" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 563, 361 )
+position = Vector2( 563, 357 )
 
 [node name="bloc8" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 651, 361 )
+position = Vector2( 651, 357 )
 
 [node name="bloc9" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 739, 361 )
+position = Vector2( 739, 357 )
 
 [node name="bloc10" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 827, 361 )
+position = Vector2( 827, 357 )
 
 [node name="bloc11" parent="fila1" instance=ExtResource( 2 )]
-position = Vector2( 915, 361 )
-
-[node name="pilota" parent="." instance=ExtResource( 4 )]
-position = Vector2( 505, 514 )
-gravity_scale = 0.0
-can_sleep = false
+position = Vector2( 915, 357 )
 
 [node name="limits" parent="." instance=ExtResource( 5 )]
 position = Vector2( 503, -8 )
@@ -114,4 +106,281 @@ position = Vector2( 1032, 204 )
 rotation = 1.5708
 scale = Vector2( 3, 1 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
+[node name="pilota_v2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 500, 500 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="contador" parent="pilota_v2" instance=ExtResource( 4 )]
+position = Vector2( -170, 416.667 )
+scale = Vector2( 3.33333, 3.33333 )
+
+[node name="fila3" type="Node2D" parent="."]
+position = Vector2( -1, -81 )
+
+[node name="bloc1" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 35, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc2" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 123, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc3" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 211, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc4" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 299, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc5" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 387, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc6" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 475, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc7" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 563, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc8" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 651, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc9" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 739, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc10" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 827, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="bloc11" parent="fila3" instance=ExtResource( 2 )]
+position = Vector2( 915, 361 )
+color = Color( 0, 0.0156863, 1, 1 )
+
+[node name="fila4" type="Node2D" parent="."]
+position = Vector2( 40, 240 )
+
+[node name="bloc_1" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_2" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 64, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_3" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 128, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_4" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 192, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_5" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 256, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_6" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 320, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_7" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_8" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 448, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_9" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 512, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_10" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 576, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_11" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 640, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_12" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 704, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_13" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 768, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_14" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 832, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="bloc_15" parent="fila4" instance=ExtResource( 3 )]
+position = Vector2( 896, 0 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="fila5" type="Node2D" parent="."]
+position = Vector2( 3, -165 )
+
+[node name="bloc1" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 32, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc2" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 120, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc3" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 208, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc4" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 296, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc5" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 384, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc6" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 472, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc7" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 560, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc8" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 648, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc9" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 736, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc10" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 824, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc11" parent="fila5" instance=ExtResource( 2 )]
+position = Vector2( 912, 365 )
+color = Color( 1, 0, 0.74902, 1 )
+
+[node name="bloc_2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 104, 319 )
+
+[node name="fila6" type="Node2D" parent="."]
+position = Vector2( 40, 240 )
+
+[node name="bloc_1" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 0, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_2" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 64, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_3" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 128, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_4" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 192, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_5" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 256, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_6" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 320, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_7" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 384, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_8" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 448, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_9" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 512, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_10" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 576, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_11" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 640, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_12" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 704, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_13" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 768, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_14" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 832, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="bloc_15" parent="fila6" instance=ExtResource( 3 )]
+position = Vector2( 896, -78 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="fila7" type="Node2D" parent="."]
+
+[node name="bloc1" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 36, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc2" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 124, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc3" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 212, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc4" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 300, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc5" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 388, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc6" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 476, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc7" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 564, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc8" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 652, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc9" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 740, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc10" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 828, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="bloc11" parent="fila7" instance=ExtResource( 2 )]
+position = Vector2( 916, 123 )
+color = Color( 0, 0, 0, 1 )
+
+[connection signal="body_entered" from="pilota_v2/contador" to="pilota_v2" method="_on_contador_body_entered"]

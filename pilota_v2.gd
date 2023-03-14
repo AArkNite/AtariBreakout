@@ -1,9 +1,7 @@
 extends KinematicBody2D
-var velocitat := 5
+var velocitat := Vector2(100,100)
 var moviment := Vector2.ZERO
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var em_moc := true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,8 +11,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	moviment.y = velocitat
-	moviment.y = velocitat
+	if em_moc:
+		var colisio := move_and_collide(velocitat * delta)
+		if colisio:
+			velocitat = velocitat.bounce(colisio.normal)
+func _on_contador_body_entered(body):
+	position = Vector2(500, 500)
+	em_moc = false
+	$Timer.start()
 	
-#	if collision 
-	pass
+func _on_Timer_timeout():
+	em_moc = true

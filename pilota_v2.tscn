@@ -4,9 +4,9 @@
 [ext_resource path="res://bola blanca.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 25.0
+radius = 25.0799
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="pilota_v2" type="KinematicBody2D"]
 position = Vector2( 505, 514 )
 script = ExtResource( 1 )
 
@@ -16,3 +16,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="CollisionShape2D"]
 scale = Vector2( 0.06125, 0.0625 )
 texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

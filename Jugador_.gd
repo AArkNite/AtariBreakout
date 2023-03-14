@@ -16,5 +16,7 @@ func _ready():
 func _process(delta):
 	
 	moviment.x = Input.get_axis("ves_esquerra", "ves_dreta") * velocitat
-		
+	if moviment.y > 0 or moviment.y < 0:
+		moviment.y = 0
 	moviment = move_and_slide(moviment)
+	
