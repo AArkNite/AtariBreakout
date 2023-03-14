@@ -9,51 +9,6 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="fila2" type="Node2D" parent="."]
-position = Vector2( 40, 319 )
-
-[node name="bloc_1" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 0, 0 )
-
-[node name="bloc_3" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 128, 0 )
-
-[node name="bloc_4" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 192, 0 )
-
-[node name="bloc_5" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 256, 0 )
-
-[node name="bloc_6" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 320, 0 )
-
-[node name="bloc_7" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 384, 0 )
-
-[node name="bloc_8" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 448, 0 )
-
-[node name="bloc_9" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 512, 0 )
-
-[node name="bloc_10" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 576, 0 )
-
-[node name="bloc_11" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 640, 0 )
-
-[node name="bloc_12" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 704, 0 )
-
-[node name="bloc_13" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 768, 0 )
-
-[node name="bloc_14" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 832, 0 )
-
-[node name="bloc_15" parent="fila2" instance=ExtResource( 3 )]
-position = Vector2( 896, 0 )
-
 [node name="Jugador" parent="." instance=ExtResource( 1 )]
 position = Vector2( 406, 584 )
 
@@ -92,6 +47,9 @@ position = Vector2( 827, 357 )
 [node name="bloc11" parent="fila1" instance=ExtResource( 2 )]
 position = Vector2( 915, 357 )
 
+[node name="contador" parent="." instance=ExtResource( 4 )]
+position = Vector2( 449, 625 )
+
 [node name="limits" parent="." instance=ExtResource( 5 )]
 position = Vector2( 503, -8 )
 scale = Vector2( 3, 1 )
@@ -109,10 +67,6 @@ scale = Vector2( 3, 1 )
 [node name="pilota_v2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 500, 500 )
 scale = Vector2( 0.3, 0.3 )
-
-[node name="contador" parent="pilota_v2" instance=ExtResource( 4 )]
-position = Vector2( -170, 416.667 )
-scale = Vector2( 3.33333, 3.33333 )
 
 [node name="fila3" type="Node2D" parent="."]
 position = Vector2( -1, -81 )
@@ -383,4 +337,49 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 916, 123 )
 color = Color( 0, 0, 0, 1 )
 
-[connection signal="body_entered" from="pilota_v2/contador" to="pilota_v2" method="_on_contador_body_entered"]
+[node name="fila2" type="Node2D" parent="."]
+position = Vector2( 40, 319 )
+
+[node name="bloc_1" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+
+[node name="bloc_3" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 128, 0 )
+
+[node name="bloc_4" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 192, 0 )
+
+[node name="bloc_5" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 256, 0 )
+
+[node name="bloc_6" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 320, 0 )
+
+[node name="bloc_7" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+
+[node name="bloc_8" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 448, 0 )
+
+[node name="bloc_9" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 512, 0 )
+
+[node name="bloc_10" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 576, 0 )
+
+[node name="bloc_11" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 640, 0 )
+
+[node name="bloc_12" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 704, 0 )
+
+[node name="bloc_13" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 768, 0 )
+
+[node name="bloc_14" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 832, 0 )
+
+[node name="bloc_15" parent="fila2" instance=ExtResource( 3 )]
+position = Vector2( 896, 0 )
+
+[connection signal="body_entered" from="contador" to="pilota_v2" method="_on_contador_body_entered"]
