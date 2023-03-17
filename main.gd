@@ -5,6 +5,7 @@ var jugant := true
 
 func _ready():
 	$contador.position = Vector2(420,590)
+	$Jugador.position = Vector2(448,584)
 	
 func _process(delta):
 	$puntuacio.suma(totals, len(get_tree().get_nodes_in_group("bloc")), jugant)
