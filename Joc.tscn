@@ -14,7 +14,7 @@
 script = ExtResource( 7 )
 
 [node name="Jugador" parent="." instance=ExtResource( 1 )]
-position = Vector2( 400, 584 )
+position = Vector2( 448, 584 )
 scale = Vector2( 0.5, 1 )
 
 [node name="pilota" parent="." groups=["pilota"] instance=ExtResource( 6 )]
