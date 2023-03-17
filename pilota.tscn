@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://pilota_v2.gd" type="Script" id=1]
+[ext_resource path="res://pilota.gd" type="Script" id=1]
 [ext_resource path="res://bola blanca.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -18,6 +18,7 @@ scale = Vector2( 0.06125, 0.0625 )
 texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
