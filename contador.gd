@@ -1,20 +1,15 @@
 extends Area2D
 
-var vides := 10
+export var vides := 5
+var disponible := false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.text = "LIVES: " + str(vides)
-	pass # Replace with function body.
-	connect("body_entered", self, "_on_body_entered")
-
+	$Label.text = "LIVES: " + str(vides) # Replace with function body.
+	connect("body_exited", self, "_on_body_exited")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	print(vides)
-	if body_entered():
-		print("a")
-	pass
 	
-func _on_body_entered(body):
+func _on_body_exited(body):
 	vides -= 1
 	$Label.text = "LIVES: " + str(vides)
 
